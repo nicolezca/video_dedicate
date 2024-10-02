@@ -6,6 +6,7 @@ configDotenv();
 
 // Configurar EJS como motor de plantillas
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views')); // Asegúrate de tener esta línea
 app.use(express.static(path.join(__dirname, 'public/css')));
 app.use( express.static(path.join(__dirname, 'public/videos')));
 
