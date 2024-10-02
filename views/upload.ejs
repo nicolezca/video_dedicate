@@ -1,0 +1,17 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/upload.css">
+    <title>Subir Videos</title>
+</head>
+<body>
+    <h1>Subir Videos</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="videos">Seleccionar videos:</label>
+        <input type="file" name="videos" id="videos" multiple required>
+        <button type="submit">Subir</button>
+    </form>
+</body>
+</html>

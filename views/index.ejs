@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Video Dedicatoria</title>
+</head>
+<body>
+    <h1>Video Dedicatoria</h1>
+    <div id="contentVideo">
+        <% if (video) { %>
+            <video loop autoplay controls>
+                <source src="/<%= video %>" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        <% } else { %>
+            <p>No hay videos disponibles.</p>
+        <% } %>
+    </div>
+</body>
+</html>

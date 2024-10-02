@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 0 0 20px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+button {
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #6e45e2;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #88d3ce;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+input[type="file"]::before {
+    content: 'Seleccionar archivo';
+    display: inline-block;
+    background: #88d3ce;
+    border: 2px solid #fff;
+    padding: 10px;
+    outline: none;
+    width: 90%;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #fff;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="file"]:hover::before {
+    background-color: #6e45e2;
+
+}
