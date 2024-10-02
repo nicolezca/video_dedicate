@@ -6,8 +6,8 @@ configDotenv();
 
 // Configurar EJS como motor de plantillas
 app.set('view engine', 'ejs');
-app.use('/css', express.static(path.join(__dirname, 'public/css')));
-app.use('/videos', express.static(path.join(__dirname, 'public/videos')));
+app.use(express.static(path.join(__dirname, 'public/css')));
+app.use( express.static(path.join(__dirname, 'public/videos')));
 
 // Importar las rutas
 const routes = require('./routes/routes');
