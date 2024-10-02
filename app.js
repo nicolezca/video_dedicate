@@ -13,6 +13,11 @@ app.use( express.static(path.join(__dirname, 'public/videos')));
 const routes = require('./routes/routes');
 app.use('/', routes);
 
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Algo salió mal! ' + err.message);
+});
+
 // Importar la función para el cambio de video a medianoche
 const { scheduleVideoChange } = require('./utils/scheduleVideoChange');
 
