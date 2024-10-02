@@ -8,8 +8,8 @@ let lastVideo = null;  // Variable para guardar el último video mostrado
 
 // Configurar EJS como motor de plantillas
 app.set('view engine', 'ejs');
-app.use(express.static('public/css/'));
-app.use(express.static('public/videos/'));
+app.use('/css', express.static(path.join(__dirname, 'public/css')));
+app.use('/videos', express.static(path.join(__dirname, 'public/videos')));
 
 // Configurar multer para manejar la carga de múltiples archivos
 const storage = multer.diskStorage({
