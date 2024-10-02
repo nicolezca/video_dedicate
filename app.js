@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const { configDotenv } = require('dotenv');
+configDotenv();
 
 // Configurar EJS como motor de plantillas
 app.set('view engine', 'ejs');
